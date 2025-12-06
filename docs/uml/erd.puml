@@ -1,0 +1,20 @@
+@startuml
+
+entity users {
+  *id: bigint
+  name: varchar
+  email: varchar
+  username: varchar
+  password: varchar
+}
+
+entity user_addreses {
+    *id: bigint
+    user_id: bigint
+    address: bigint
+    name: varchar
+    city: varchar
+    phone_number: varchar
+}
+
+@enduml

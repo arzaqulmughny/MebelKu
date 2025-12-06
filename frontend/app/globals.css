@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #22c55e;
+  --background-light: #f9fafb;
+  --background-dark: #111827;
+  --text-light: #111827;
+  --text-dark: #f9fafb;
+  --muted-light: #6b7280;
+  --muted-dark: #9ca3af;
+  --border-light: #e5e7eb;
+  --border-dark: #374151;
 }
 
 @theme inline {
@@ -20,7 +29,24 @@
 }
 
 body {
-  background: var(--background);
+  background: white;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal2-title {
+  color: var(--text-light) !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+.swal2-html-container {
+  color: var(--text-light) !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+}
+
+.swal2-confirm {
+  background-color: var(--primary) !important;
+  color: var(--text-dark) !important;
 }

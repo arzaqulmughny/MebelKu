@@ -1,0 +1,16 @@
+@startuml
+start
+
+:Admin masuk ke halaman dashboard;
+:Admin memilih pesanan untuk diproses;
+
+if (Pesanan sudah diproses) then (Belum)
+    :Admin memperbarui status pesanan;
+    :Admin memproses pesanan;
+endif
+
+:Admin meneruskan pesanan ke pihak ekspedisi;
+:Admin memantau proses pengiriman;
+
+end
+@enduml

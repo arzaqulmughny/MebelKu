@@ -1,0 +1,26 @@
+@startuml user_checkout
+start
+
+:User membuka aplikasi;
+:User melihat daftar barang;
+:User memasukkan barang ke keranjang;
+
+if (User login?) then (Belum)
+  :User memilih "Register";
+  :User mengisi form;
+  :Sistem membuat akun;
+endif
+
+:User login;
+:User melakukan checkout;
+
+if (User sudah memiliki alamat) then (Belum)
+    :User menambahkan alamat;
+endif
+
+:User memilih alamat;
+:User memilih metode pembayaran;
+:User membayar pesanan;
+
+stop
+@enduml
