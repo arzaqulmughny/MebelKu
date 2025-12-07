@@ -42,12 +42,42 @@ const products = [
     discount: 30,
     discount_expired: "2023-12-31",
   },
+  {
+    id: 1,
+    name: "Meja",
+    price: "Rp. 1.200.000",
+    image: "/assets/images/product-2.jpg",
+    rating: 3,
+    original_price: "Rp. 1.500.000",
+    discount: 30,
+    discount_expired: "2023-12-31",
+  },
+  {
+    id: 1,
+    name: "Meja",
+    price: "Rp. 1.200.000",
+    image: "/assets/images/product-2.jpg",
+    rating: 3,
+    original_price: "Rp. 1.500.000",
+    discount: 30,
+    discount_expired: "2023-12-31",
+  },
+  {
+    id: 1,
+    name: "Meja",
+    price: "Rp. 1.200.000",
+    image: "/assets/images/product-2.jpg",
+    rating: 3,
+    original_price: "Rp. 1.500.000",
+    discount: 30,
+    discount_expired: "2023-12-31",
+  },
 ];
 
 export default function FlashSale() {
   return (
     <>
-      <div className="flex flex-col gap-y-2">
+      <div className="flex flex-col gap-y-4 w-full">
         <div className="flex justify-between items-end">
           <h1 className="text-xl font-bold text-(--text-light)">Flash Sale</h1>
           <Link
@@ -58,9 +88,9 @@ export default function FlashSale() {
           </Link>
         </div>
 
-        <ul className="flex gap-4 flex-wrap">
+        <ul className="grid grid-cols-4 gap-4">
           {products.map((product, index) => (
-            <li key={index} className="flex-1">
+            <li key={index}>
               <ProductCard
                 id={product.id}
                 name={product.name}

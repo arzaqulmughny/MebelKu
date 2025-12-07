@@ -16,11 +16,11 @@ export default function Advantage() {
 
   return (
     <>
-      <div className="flex flex-col gap-y-2">
+      <div className="flex flex-col gap-y-4 w-full">
         <h1 className="text-xl font-bold text-(--text-light)">
           Kelebihan Kami
         </h1>
-        <ul className="flex flex-col gap-y-3">
+        <ul className="flex flex-col gap-y-3 md:flex-row gap-x-5">
           {advantages.map((advantage, index) => (
             <li
               key={index}

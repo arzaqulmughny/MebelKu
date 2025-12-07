@@ -66,7 +66,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <>
-      <div className="bg-white border border(--border-light) rounded-xl overflow-hidden min-w-[150px]">
+      <div className="bg-white border border(--border-light) rounded-xl overflow-hidden group cursor-pointer hover:scale-105 transition-all duration-300">
         <div className="w-full h-40 overflow-hidden">
           {discount && (
             <div className="absolute bg-red-500 text-white text-xs px-2 py-1 rounded m-2">

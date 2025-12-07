@@ -30,6 +30,20 @@ const products = [
     image: "/assets/images/product-2.jpg",
     rating: 3,
   },
+  {
+    id: 1,
+    name: "Meja",
+    price: "Rp. 1.200.000",
+    image: "/assets/images/product-2.jpg",
+    rating: 3,
+  },
+  {
+    id: 1,
+    name: "Meja",
+    price: "Rp. 1.200.000",
+    image: "/assets/images/product-2.jpg",
+    rating: 3,
+  },
 ];
 
 const categories = [
@@ -68,7 +82,7 @@ const CategoryButton = ({ name, active = false }: CategoryButtonProps) => {
   return (
     <button
       type="button"
-      className={`text-(--text-light px-3 py-1 rounded-4xl text-sm ${
+      className={`text-(--text-light px-3 py-1 rounded-4xl text-sm transition-all duration-300 cursor-pointer ${
         active
           ? "bg-(--primary)/20 text-(--primary)"
           : "bg-gray-200 text-(--text-light)"
@@ -81,8 +95,8 @@ const CategoryButton = ({ name, active = false }: CategoryButtonProps) => {
 
 export default function FeaturedProduct() {
   return (
-    <div className="flex flex-col gap-y-5">
-      <div className="flex flex-col gap-y-5">
+    <div className="flex flex-col gap-y-5 w-full">
+      <div className="flex flex-col gap-y-4">
         <h1 className="text-xl font-bold text-(--text-light)">
           Produk Unggulan
         </h1>
@@ -96,9 +110,9 @@ export default function FeaturedProduct() {
             ))}
           </ul>
 
-          <ul className="flex gap-4 flex-wrap">
+          <ul className="grid grid-cols-4 gap-4">
             {products.map((product, index) => (
-              <li key={index} className="flex-1">
+              <li key={index}>
                 <ProductCard
                   id={product.id}
                   name={product.name}
@@ -111,18 +125,6 @@ export default function FeaturedProduct() {
           </ul>
         </div>
       </div>
-      <Button className="flex gap-2 items-center justify-center">
-        Lihat Semua Produk
-        <div className="w-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-          </svg>
-        </div>
-      </Button>
     </div>
   );
 }

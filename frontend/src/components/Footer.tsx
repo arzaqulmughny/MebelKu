@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
     <>
-      <div className="flex flex-col bg-white">
-        <ul className="border-t border-(--border) py-5 px-2.5 flex flex-wrap gap-7">
-          <li className="flex flex-col gap-y-2">
+      <div className="flex flex-col bg-white border-t border-(--border) ">
+        <ul className="py-5 px-2.5 flex flex-wrap gap-7 w-full max-w-[1200px] mx-auto">
+          <li className="flex flex-col gap-y-2 md:flex-1">
             <h1 className="text-(--text-light) font-bold">Mebelku</h1>
             <p className="text-(--text-light)/70 text-sm">
               Toko mebel online terpercaya untuk kebutuhan UMKM dengan kualitas
@@ -11,7 +11,7 @@ export default function Footer() {
             </p>
           </li>
 
-          <li className="flex flex-col gap-y-2">
+          <li className="flex flex-col gap-y-2 md:flex-1">
             <h1 className="text-(--text-light) font-bold">Navigasi</h1>
             <ul className="flex flex-col gap-y-2">
               <li>
@@ -32,7 +32,7 @@ export default function Footer() {
             </ul>
           </li>
 
-          <li className="flex flex-col gap-y-2 flex-1">
+          <li className="flex flex-col gap-y-2 md:flex-1">
             <h1 className="text-(--text-light) font-bold">Kontak</h1>
             <ul className="flex flex-col gap-y-2">
               <li>
@@ -72,7 +72,7 @@ export default function Footer() {
             </ul>
           </li>
 
-          <li className="flex flex-col gap-y-2 w-full">
+          <li className="flex flex-col gap-y-2 md:flex-1">
             <h1 className="text-(--text-light) font-bold">Ikuti Kami</h1>
             <ul className="flex gap-x-2">
               <li>

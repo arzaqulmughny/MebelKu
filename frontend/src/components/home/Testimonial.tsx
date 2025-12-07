@@ -59,9 +59,9 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="flex flex-col gap-y-4 w-full">
       <h1 className="text-xl font-bold text-(--text-light)">
-        Testimoni Pelanggan
+        Apa Kata Pelanggan Kami?
       </h1>
 
       <ul className="flex gap-x-4 overflow-auto scroll-smooth scrollbar-none">
