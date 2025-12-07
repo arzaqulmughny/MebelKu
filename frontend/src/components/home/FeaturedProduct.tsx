@@ -59,7 +59,12 @@ const categories = [
   },
 ];
 
-const CategoryButton = ({ name, active = false }) => {
+interface CategoryButtonProps {
+  name: string;
+  active?: boolean;
+}
+
+const CategoryButton = ({ name, active = false }: CategoryButtonProps) => {
   return (
     <button
       type="button"

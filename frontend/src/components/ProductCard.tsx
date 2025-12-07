@@ -17,7 +17,12 @@ export const Star = ({ fillPercent = 0 }) => {
   );
 };
 
-export function Rating({ value, total = 5 }) {
+interface RatingProps {
+  value: number;
+  total?: number;
+}
+
+export function Rating({ value, total = 5 }: RatingProps) {
   return (
     <div className="flex">
       {Array.from({ length: total }).map((_, i) => {
@@ -44,9 +49,9 @@ interface ProductCardProps {
   price: string;
   image: string;
   rating: number;
-  originalPrice: string;
-  discount: number;
-  discountExpired: string;
+  originalPrice?: string;
+  discount?: number;
+  discountExpired?: string;
 }
 
 export default function ProductCard({
@@ -79,7 +84,7 @@ export default function ProductCard({
         <div className="px-4 py-2 flex flex-col gap-y-1">
           <h1 className="text-sm text-(--text-light) h-11">{name}</h1>
 
-          {discount > 0 && (
+          {discount && discount > 0 && (
             <p className="text-xs font-bold text-(--text-light)/40 line-through">
               {originalPrice}
             </p>
@@ -87,7 +92,7 @@ export default function ProductCard({
 
           <p className="text-sm font-bold text-(--text-light)">{price}</p>
 
-          {discountExpired && (
+          {discountExpired && discountExpired !== "" && (
             <div className="text-xs text-red-500 flex items-center gap-x-2">
               <div className="w-4">
                 <svg
