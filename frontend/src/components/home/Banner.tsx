@@ -8,7 +8,7 @@ const ButtonNavigator = ({ direction, ...props }: ButtonProps) => {
   return (
     <button
       className={`absolute top-1/2 ${
-        direction === "left" ? "left-10" : "right-10 rotate-180"
+        direction === "left" ? "md:left-10 left-5" : "md:right-10 right-5 rotate-180"
       } transform -translate-y-1/2 text-black font-bold text-lg bg-white/70 w-10 aspect-square rounded-full flex items-center justify-center hover:bg-white cursor-pointer transition-all duration-300`}
       {...props}
     >
@@ -63,6 +63,7 @@ export default function Slider() {
         >
           <ButtonNavigator direction="left" onClick={() => setCurrentImage((prevImage) => (prevImage - 1 + data.length) % data.length)} />
           <ButtonNavigator direction="right" onClick={() => setCurrentImage((prevImage) => (prevImage + 1) % data.length)} />
+            
           <div className="flex flex-col gap-y-2">
             <h1 className="text-white font-bold text-lg leading-tight md:text-2xl lg:text-4xl">
               {data[currentImage].title}
@@ -70,25 +71,6 @@ export default function Slider() {
             <p className="text-sm text-white md:text-base lg:text-lg">
               {data[currentImage].description}
             </p>
-          </div>
-
-          <div className="flex gap-x-2 md:hidden">
-            {data.map((_, index) => {
-              const isActive = index === currentImage;
-              const classes = [
-                "h-0.5",
-                "w-full",
-                "transition-all",
-                "duration-300",
-                isActive
-                  ? "bg-(--primary) flex-1"
-                  : "bg-(--border-light) flex-2",
-              ].join(" ");
-
-              return (
-                <button key={index} type="button" className={classes}></button>
-              );
-            })}
           </div>
         </div>
 
