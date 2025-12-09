@@ -1,17 +1,22 @@
 import { products } from "@/src/components/home/FeaturedProduct";
 import ProductCard, { Rating, Star } from "@/src/components/ProductCard";
+import ColorVariant from "@/src/components/products/[slug]/ColorVariant";
 import Slider from "@/src/components/products/[slug]/Slider";
 import Link from "next/link";
-
-export async function generateStaticParams() {
-  return [{ slug: "sofa-modern" }];
-}
 
 const images = [
   "/assets/images/banner-1.jpg",
   "/assets/images/banner-2.jpg",
   "/assets/images/banner-3.jpg",
 ];
+
+export function generateStaticParams() {
+  return [
+    {
+      slug: "sofa-modern",
+    },
+  ];
+}
 
 export default function Page({ params }: { params: { slug: string } }) {
   return (
@@ -48,11 +53,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
         <div className="flex flex-col gap-2">
           <h2 className="text-(--text-light) font-bold text-sm">Pilih Warna</h2>
-          <ul className="flex gap-x-2">
-            <li className="w-6 aspect-square bg-green-900 rounded-full"></li>
-            <li className="w-6 aspect-square bg-black rounded-full"></li>
-            <li className="w-6 aspect-square bg-blue-950 rounded-full"></li>
-          </ul>
+          <ColorVariant />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -76,25 +77,23 @@ export default function Page({ params }: { params: { slug: string } }) {
           <h2 className="text-(--text-light) font-bold text-sm">
             Spesifikasi Produk
           </h2>
-          <table className="flex flex-col gap-2">
-            <tr className="flex justify-between">
-              <th className="text-(--text-light)/80 font-normal text-sm text-start">
-                Panjang
-              </th>
-              <td className="text-(--text-light) text-end text-sm">2,5 m</td>
-            </tr>
-            <tr className="flex justify-between">
-              <th className="text-(--text-light)/80 font-normal text-sm text-start">
-                Lebar
-              </th>
-              <td className="text-(--text-light) text-end text-sm">1,5 m</td>
-            </tr>
-            <tr className="flex justify-between">
-              <th className="text-(--text-light)/80 font-normal text-sm text-start">
-                Material
-              </th>
-              <td className="text-(--text-light) text-end text-sm">Plastik</td>
-            </tr>
+          <table className="w-full border-separate border-spacing-y-2">
+            <tbody>
+              <tr>
+                <td className="text-(--text-light)/80 text-sm">Panjang</td>
+                <td className="text-(--text-light) text-sm text-end">2,5 m</td>
+              </tr>
+              <tr>
+                <td className="text-(--text-light)/80 text-sm">Lebar</td>
+                <td className="text-(--text-light) text-sm text-end">1,5 m</td>
+              </tr>
+              <tr>
+                <td className="text-(--text-light)/80 text-sm">Material</td>
+                <td className="text-(--text-light) text-sm text-end">
+                  Plastik
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
 
@@ -141,8 +140,8 @@ export default function Page({ params }: { params: { slug: string } }) {
           </h1>
 
           <ul className="flex gap-3 overflow-auto scrollbar-none">
-            {products.map((product) => (
-              <li key={product.id}>
+            {products.map((product, index) => (
+              <li key={index}>
                 <ProductCard
                   id={product.id}
                   name={product.name}
