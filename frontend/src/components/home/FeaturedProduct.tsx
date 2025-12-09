@@ -1,7 +1,7 @@
 import Button from "../Button";
 import ProductCard, { Rating } from "../ProductCard";
 
-const products = [
+export const products = [
   {
     id: 1,
     name: "Meja Modern Minimalis",
@@ -82,7 +82,7 @@ const CategoryButton = ({ name, active = false }: CategoryButtonProps) => {
   return (
     <button
       type="button"
-      className={`text-(--text-light px-3 py-1 rounded-4xl text-sm transition-all duration-300 cursor-pointer ${
+      className={`text-(--text-light px-3 py-1 rounded-4xl text-xs transition-all duration-300 cursor-pointer ${
         active
           ? "bg-(--primary)/20 text-(--primary)"
           : "bg-gray-200 text-(--text-light)"
@@ -110,7 +110,7 @@ export default function FeaturedProduct() {
             ))}
           </ul>
 
-          <ul className="grid grid-cols-4 gap-4">
+          <ul className="flex gap-4 scrollbar-none overflow-auto">
             {products.map((product, index) => (
               <li key={index}>
                 <ProductCard

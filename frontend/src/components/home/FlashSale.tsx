@@ -88,7 +88,7 @@ export default function FlashSale() {
           </Link>
         </div>
 
-        <ul className="grid grid-cols-4 gap-4">
+        <ul className="flex gap-4 scrollbar-none overflow-auto">
           {products.map((product, index) => (
             <li key={index}>
               <ProductCard
