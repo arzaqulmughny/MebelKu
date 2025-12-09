@@ -1,4 +1,5 @@
 import Navbar from "@/src/components/products/[slug]/Navbar";
+import { ReactNode } from "react";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
