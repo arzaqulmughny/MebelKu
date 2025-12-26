@@ -28,7 +28,7 @@ export default function Slider({ images }: { images: string[] }) {
 
   return (
     <div
-      className="w-full aspect-video relative overflow-hidden select-none flex items-end"
+      className="w-full aspect-video md:aspect-square relative overflow-hidden select-none flex items-end md:rounded-xl"
       onTouchStart={(e) => start(e.touches[0].clientX)}
       onTouchEnd={(e) => end(e.changedTouches[0].clientX)}
       onMouseDown={(e) => start(e.clientX)}

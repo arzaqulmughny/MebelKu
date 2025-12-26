@@ -17,20 +17,47 @@ const ButtonIcon = ({ children }: ButtonIconProps) => {
 
 export default function Navbar() {
   return (
-    <nav className="border-b border-(--border-color) px-2.5 py-3 sticky top-0 bg-white z-10 flex justify-between items-center">
-      <Link href="/">
-        <ButtonIcon>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path>
-          </svg>
-        </ButtonIcon>
-      </Link>
+    <nav className="border-b border-(--border-color) px-2.5 py-2 gap-x-4 md:gap-x-10 sticky top-0 bg-white z-10 flex justify-between items-center">
+      <div className="flex items-center gap-x-5">
+        <Link href="/">
+          <ButtonIcon>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path>
+            </svg>
+          </ButtonIcon>
+        </Link>
 
-      <h1 className="text-(--text-light) font-bold text-md">MebelKu</h1>
+        <h1 className="text-(--text-light) font-bold text-md md:inline hidden">MebelKu</h1>
+      </div>
+
+      <label className="border border-(--border-light) bg-gray-50 min-w-[200px] w-full max-w-[600px] rounded-2xl flex items-center pl-5 gap-x-2">
+        <svg
+          className="text-(--text-light)/50"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeWidth="2"
+            d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+          />
+        </svg>
+
+        <input
+          type="text"
+          placeholder="Cari perabotan minimalis"
+          className="pr-5 p-2 placeholder:text-(--text-light)/50 placeholder:text-sm text-sm text-(--text-light)/80 w-full focus:placeholder:text-transparent focus:outline-0"
+        />
+      </label>
 
       <div className="flex items-center gap-6">
         <ButtonIcon>
