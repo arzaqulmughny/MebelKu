@@ -69,7 +69,7 @@ export default function ProductCard({
   return (
     <>
       <Link href={`/products/sofa-modern`}>
-        <div className="bg-white border border(--border-light) rounded-xl overflow-hidden cursor-pointer transition-all duration-300 min-w-[200px] max-w-[200px]">
+        <div className="bg-white border border(--border-light) rounded-xl overflow-hidden cursor-pointer transition-all duration-300">
           <div className="w-full h-40 overflow-hidden relative">
             {discount && (
               <div className="absolute bg-red-500 text-white text-xs px-2 py-1 rounded m-2">

@@ -8,6 +8,8 @@ export const products = [
     price: "Rp. 1.200.000",
     image: "/assets/images/product-1.jpg",
     rating: 4.5,
+    category: "Living Room",
+    sub_category: "Chair",
   },
   {
     id: 1,
@@ -15,6 +17,8 @@ export const products = [
     price: "Rp. 1.200.000",
     image: "/assets/images/product-2.jpg",
     rating: 3,
+    category: "Living Room",
+    sub_category: "Chair",
   },
   {
     id: 1,
@@ -22,6 +26,8 @@ export const products = [
     price: "Rp. 1.200.000",
     image: "/assets/images/product-2.jpg",
     rating: 3,
+    category: "Living Room",
+    sub_category: "Chair",
   },
   {
     id: 1,
@@ -29,6 +35,8 @@ export const products = [
     price: "Rp. 1.200.000",
     image: "/assets/images/product-2.jpg",
     rating: 3,
+    category: "Living Room",
+    sub_category: "Chair",
   },
   {
     id: 1,
@@ -36,6 +44,8 @@ export const products = [
     price: "Rp. 1.200.000",
     image: "/assets/images/product-2.jpg",
     rating: 3,
+    category: "Living Room",
+    sub_category: "Chair",
   },
   {
     id: 1,
@@ -43,6 +53,8 @@ export const products = [
     price: "Rp. 1.200.000",
     image: "/assets/images/product-2.jpg",
     rating: 3,
+    category: "Living Room",
+    sub_category: "Chair",
   },
 ];
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 const links = [
   {
     name: "Semua Produk",
-    href: "/",
+    href: "/products",
   },
   {
     name: "Blog",
